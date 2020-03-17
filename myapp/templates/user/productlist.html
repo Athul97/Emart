@@ -1,0 +1,451 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+
+    <title>Poduct list</title>
+
+</head>
+
+<body>
+    <!--Naigation bar start-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contact</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-secondary btn-number">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <a class="btn btn-success btn-sm ml-3" href="#">
+                        <i class="fa fa-shopping-cart"></i> Cart
+                        <span class="badge badge-light">3</span>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-user-circle-o" style="font-size:24px; margin-left: 10px;"></i>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!---Nav bar ends-->
+    <!--product list start-->
+    <hr>
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 5%;">
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'tomato.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Tomato</a></h3>
+                        <div class="price"> &#x20b9;11.00
+                            <span> &#x20b9;14.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'orange.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Orange</a></h3>
+                        <div class="price"> &#x20b9;50.00
+                            <span> &#x20b9;60.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'rice.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Rice</a></h3>
+                        <div class="price"> &#x20b9;36.00
+                            <span> &#x20b9;40.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'dark.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Dark fantasy</a></h3>
+                        <div class="price"> &#x20b9;23.00
+                            <span> &#x20b9;25.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'sugar.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Sugar</a></h3>
+                        <div class="price"> &#x20b9;35.00
+                            <span> &#x20b9;38.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'aashirvaad.png'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Aashirvaad Atta</a></h3>
+                        <div class="price"> &#x20b9;48.00
+                            <span> &#x20b9;52.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'turmeric.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Turmeric</a></h3>
+                        <div class="price"> &#x20b9;110.00
+                            <span> &#x20b9;115.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'lux.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Lux</a></h3>
+                        <div class="price"> &#x20b9;88.00
+                            <span> &#x20b9;96.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'onion.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Onion</a></h3>
+                        <div class="price"> &#x20b9;60.00
+                            <span> &#x20b9;62.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'eastern.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Eastern chicken</a></h3>
+                        <div class="price"> &#x20b9;19.00
+                            <span> &#x20b9;20.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'tajmahaltea.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">TajMahal Tea</a></h3>
+                        <div class="price"> &#x20b9;265.00
+                            <span> &#x20b9;280.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'maggi.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Maggi Noodles</a></h3>
+                        <div class="price"> &#x20b9;9.00
+                            <span> &#x20b9;10.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'tomato.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Tomato</a></h3>
+                        <div class="price"> &#x20b9;11.00
+                            <span> &#x20b9;14.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'orange.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Orange</a></h3>
+                        <div class="price"> &#x20b9;50.00
+                            <span> &#x20b9;60.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'rice.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Rice</a></h3>
+                        <div class="price"> &#x20b9;36.00
+                            <span> &#x20b9;40.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'dark.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Dark fantasy</a></h3>
+                        <div class="price"> &#x20b9;23.00
+                            <span> &#x20b9;25.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'sugar.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Sugar</a></h3>
+                        <div class="price"> &#x20b9;35.00
+                            <span> &#x20b9;38.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="{% static 'aashirvaad.png'%}">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Aashirvaad Atta</a></h3>
+                        <div class="price"> &#x20b9;48.00
+                            <span> &#x20b9;52.00</span>
+                        </div>
+                    </div>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--product list ends-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

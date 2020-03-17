@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+    <title>cart</title>
+</head>
+
+<body>
+    <!-- Navigation Bar start-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Wishlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contact</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-secondary btn-number">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                        </div>
+                    </div>
+                    <a class="btn btn-success btn-sm ml-3" href="">
+                        <i class="fa fa-shopping-cart"></i> Cart
+                        <span class="badge badge-light">3</span>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-user-circle-o" style="font-size:24px; margin-left: 10px;"></i>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar End -->
+
+    <div class="container">
+        <!--Cart List start-->
+        <div class="row" style="margin-top: 6%;">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-sm-8 col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdph0CP1dgIjBr2jNPndDhkpYEI3rqDfOW0SrI7OGjFYelv4em1A&s" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                        <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-sm-1 col-md-1" style="text-align: center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                            </td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>40</strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>120</strong></td>
+                            <td class="col-sm-1 col-md-1">
+                                <button type="button" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove"></span> Remove
+                            </button></td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdph0CP1dgIjBr2jNPndDhkpYEI3rqDfOW0SrI7OGjFYelv4em1A&s" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                        <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-md-1" style="text-align: center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                            </td>
+                            <td class="col-md-1 text-center"><strong>50</strong></td>
+                            <td class="col-md-1 text-center"><strong>100</strong></td>
+                            <td class="col-md-1">
+                                <button type="button" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove"></span> Remove
+                            </button></td>
+                        </tr>
+
+                        <tr>
+                            <td class="col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdph0CP1dgIjBr2jNPndDhkpYEI3rqDfOW0SrI7OGjFYelv4em1A&s" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                        <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-md-1" style="text-align: center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" value="4">
+                            </td>
+                            <td class="col-md-1 text-center"><strong>20</strong></td>
+                            <td class="col-md-1 text-center"><strong>80</strong></td>
+                            <td class="col-md-1">
+                                <button type="button" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove"></span> Remove
+                            </button></td>
+                        </tr>
+
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <h5>Subtotal</h5>
+                            </td>
+                            <td class="text-right">
+                                <h5><strong>300</strong></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <h5>Estimated shipping</h5>
+                            </td>
+                            <td class="text-right">
+                                <h5><strong>20</strong></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <h3>Total</h3>
+                            </td>
+                            <td class="text-right">
+                                <h3><strong>320</strong></h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <button style="font-size:12px" class="btn btn-warning">Continue shopping<i class="fa fa-cart-plus"></i></button></td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                Checkout <span class="fa fa-calendar-check-o"></span>
+                            </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Cart List ends-->
+    </div>
+</body>
+
+</html>

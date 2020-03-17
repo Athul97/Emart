@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        
+        body {
+            background-color: #f3f5f9;
+        }
+        
+        .wrapper {
+            display: flex;
+            position: relative;
+        }
+        
+        .wrapper .sidebar {
+            width: 200px;
+            height: 100%;
+            background: #4b4276;
+            padding: 30px 0px;
+            position: fixed;
+        }
+        
+        .wrapper .sidebar h2 {
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .wrapper .sidebar ul li {
+            padding: 15px;
+            border-bottom: 1px solid #bdb8d7;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .wrapper .sidebar ul li a {
+            color: #bdb8d7;
+            display: block;
+        }
+        
+        .wrapper .sidebar ul li a .fas {
+            width: 25px;
+        }
+        
+        .wrapper .sidebar ul li:hover {
+            background-color: #594f8d;
+        }
+        
+        .wrapper .sidebar ul li:hover a {
+            color: #fff;
+        }
+        
+        .wrapper .sidebar .social_media {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        
+        .wrapper .sidebar .social_media a {
+            display: block;
+            width: 40px;
+            background: #594f8d;
+            height: 40px;
+            line-height: 45px;
+            text-align: center;
+            margin: 0 5px;
+            color: #bdb8d7;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+        .wrapper .main_content {
+            width: 100%;
+            margin-left: 200px;
+        }
+        
+        .wrapper .main_content .header {
+            padding: 20px;
+            background: #fff;
+            color: #717171;
+            border-bottom: 1px solid #e0e4e8;
+        }
+        
+        .wrapper .main_content .info {
+            margin: 20px;
+            color: #717171;
+            line-height: 25px;
+        }
+        
+        .wrapper .main_content .info div {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <!---navigation bar start--->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Homeshop</a>
+            </div>
+        </nav>
+
+        <!---navigation bar end-->
+        <div class="row" style="margin-top: 5%;">
+
+            <!--Side bar Starts-->
+            <div class="col-md-2">
+                <div class="wrapper">
+                    <div class="sidebar">
+                        <h2>Admin</h2>
+                        <ul>
+                            <!-- <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                            <li class="active list-group-item-secondary"><a href="#"><i class="fas fa-folder-plus"></i>Category</a></li>
+                            <li><a href="#"><i class="fas fa-file"></i>Subcategory</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i>Product</a></li>
+                            <li><a href="#"><i class="fas fa-address-card"></i>User Manage</a></li> -->
+                            <!-- <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
+                        <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li> -->
+
+                            <div class="list-group" id="list-tab" role="tablist">
+                                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+                                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--Side bar Ends-->
+
+
+            <div class="col-md-9">
+                <div class="row">
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                            <!--Category in Starts-->
+                            <div class="col-md-1"></div>
+                            <div class="col-md-7" style="margin-top: 15px;">
+                                <div class="card">
+                                    <div class="card-header">
+                                        CATEGORIES
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">Category Name</label>
+                                                <input type="text" class="form-control" id="category" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Description</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Image</label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" style="margin-left: 40%; width: 100px;">ADD</button>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Category in Ends-->
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-8">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Image</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+
+                        <!--Category in Starts-->
+                        <div class="col-md-1"></div>
+                        <div class="col-md-7" style="margin-top: 15px;">
+                            <div class="card">
+                                <div class="card-header">
+                                    SUBCATEGORIES
+                                </div>
+                                <div class="card-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Category</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                    <option>##</option>
+                    <option>##</option>
+                    <option>##</option>
+                    <option>##</option>
+                    <option>##</option>
+                  </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">SubCategory</label>
+                                            <input type="text" class="form-control" id="subcategory" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Type</label>
+                                            <input type="text" class="form-control" id="subtype" placeholder="">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" style="margin-left: 40%; width: 100px;">ADD</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Category in Ends-->
+                    </div>
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-8">
+                            <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Subcategory</th>
+                                        <th scope="col">Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+
+                    <!--Category in Starts-->
+                    <div class="col-md-1"></div>
+                    <div class="col-md-9" style="margin-top: 15px;">
+                        <div class="card">
+                            <div class="card-header">
+                                PRODUCTS
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Category</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                         </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">SubCategory</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                         </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Brand</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                           <option>##</option>
+                                         </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Product Name</label>
+                                        <input type="text" class="form-control" id="subcategory" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Image 1</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Image 2</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Image 3</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Description</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" style="margin-left: 40%; width: 100px;">ADD</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Category in Ends-->
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Subcategory</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">OfferPrice</th>
+                                    <th scope="col">MRP</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn"><i class="fa fa-trash"></i> Trash</button>
+                                        <button class="btn"><i class="fas fa-edit"></i>Edit</button>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn"><i class="fa fa-trash"></i> Trash</button>
+                                        <button class="btn"><i class="fas fa-edit"></i>Edit</button>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn"><i class="fa fa-trash"></i> Trash</button>
+                                        <button class="btn"><i class="fas fa-edit"></i>Edit</button>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn"><i class="fa fa-trash"></i> Trash</button>
+                                        <button class="btn"><i class="fas fa-edit"></i>Edit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
